@@ -37,5 +37,5 @@ app.get('/list', function(req, res){
     db.collection('post').find().toArray(function(error, result){
         console.log(result);
     });
-    res.render('list.ejs');
+    res.render('list.ejs', {posts : result});
 })
